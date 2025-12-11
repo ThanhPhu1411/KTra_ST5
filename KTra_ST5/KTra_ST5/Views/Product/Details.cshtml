@@ -1,0 +1,45 @@
+﻿@model Product
+
+<div class="container mt-4">
+
+    <a href="/Product/Index" class="btn btn-secondary mb-3">⬅ Quay lại</a>
+
+    <div class="card shadow-lg rounded-4 p-4">
+        <div class="row">
+
+            <div class="col-md-5">
+                <img src="/images/@Model.Image"
+                     class="img-fluid rounded-3 shadow"
+                     style="height: 350px; object-fit: cover;" />
+            </div>
+
+            <div class="col-md-7">
+                <h2 class="fw-bold text-primary">@Model.Name</h2>
+
+                <h4 class="text-success fw-semibold">
+                    Giá: @String.Format("{0:N0} đ", Model.Price)
+                </h4>
+
+                <hr />
+
+                <p class="text-muted fs-5">
+                    Mã sản phẩm: <strong>@Model.Id</strong>
+                </p>
+
+                <div class="mt-4">
+                    <a href="/Product/Edit/@Model.Id" class="btn btn-warning px-4 me-2">
+                        ✏ Sửa sản phẩm
+                    </a>
+
+                    <a href="/Product/Delete/@Model.Id"
+                       class="btn btn-danger px-4"
+                       onclick="return confirm('Bạn có chắc muốn xóa?');">
+                        🗑 Xóa sản phẩm
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
