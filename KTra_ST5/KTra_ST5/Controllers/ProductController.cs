@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Models;
+using KTra_ST5.Models;
 
 public class ProductController : Controller
 {
