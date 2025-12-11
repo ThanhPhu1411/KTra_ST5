@@ -5,7 +5,7 @@ public class ProductController : Controller
 {
     private static List<Product> products = new List<Product>()
     {
-        new Product { Id = 1, Name = "Cake 1", Price = 50000, Image = "cake1.jpg" },
+        new Product { Id = 1, Name = "Cake 1", Price = 85000, Image = "cake1.jpg" },
         new Product { Id = 2, Name = "Cake 2", Price = 60000, Image = "cake2.jpg" }
     };
 
