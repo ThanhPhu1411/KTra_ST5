@@ -1,0 +1,23 @@
+﻿@model WebApplication1.Models.Product
+
+<h2>Thêm sản phẩm</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Price</label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Image (tên file, ví dụ: cake1.jpg)</label>
+        <input asp-for="Image" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Create</button>
+    <a href="/Product/Index" class="btn btn-secondary">Back</a>
+</form>
