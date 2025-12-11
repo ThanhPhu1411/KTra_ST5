@@ -1,23 +1,35 @@
 ﻿@model KTra_ST5.Models.Product
 
-<h2>Thêm sản phẩm</h2>
+<div class="container mt-5">
 
-<form method="post">
-    <div class="form-group">
-        <label>Name</label>
-        <input asp-for="Name" class="form-control" />
+    <div class="card shadow-lg p-4 rounded-4" style="max-width: 650px; margin: auto;">
+
+        <h2 class="text-center fw-bold text-primary mb-4">➕ Thêm sản phẩm</h2>
+
+        <form method="post">
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Tên sản phẩm</label>
+                <input asp-for="Name" class="form-control rounded-3" placeholder="Nhập tên sản phẩm" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Giá</label>
+                <input asp-for="Price" class="form-control rounded-3" placeholder="Ví dụ: 50000" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Hình ảnh</label>
+                <input asp-for="Image" class="form-control rounded-3" placeholder="Ví dụ: cake1.jpg" />
+                <small class="text-muted">Chỉ nhập tên file, không cần đường dẫn</small>
+            </div>
+
+            <div class="d-flex justify-content-between mt-4">
+                <button type="submit" class="btn btn-success px-4">✔ Lưu</button>
+                <a href="/Product/Index" class="btn btn-secondary px-4">← Quay lại</a>
+            </div>
+
+        </form>
     </div>
 
-    <div class="form-group">
-        <label>Price</label>
-        <input asp-for="Price" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label>Image (tên file, ví dụ: cake1.jpg)</label>
-        <input asp-for="Image" class="form-control" />
-    </div>
-
-    <button type="submit" class="btn btn-success">Create</button>
-    <a href="/Product/Index" class="btn btn-secondary">Back</a>
-</form>
+</div>
