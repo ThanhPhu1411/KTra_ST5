@@ -1,0 +1,31 @@
+﻿@model WebApplication1.Models.Product
+
+<h2>Sửa sản phẩm</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label>ID</label>
+        <input type="text" class="form-control" value="@Model.Id" disabled />
+        <input type="hidden" name="Id" value="@Model.Id" />
+    </div>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="Name" class="form-control" value="@Model.Name" required />
+    </div>
+
+    <div class="form-group">
+        <label>Price</label>
+        <input type="number" name="Price" class="form-control" value="@Model.Price" required />
+    </div>
+
+    <div class="form-group">
+        <label>Image (tên file ảnh)</label>
+        <input type="text" name="Image" class="form-control" value="@Model.Image" />
+        <br />
+        <img src="/images/@Model.Image" width="120" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cập nhật</button>
+    <a href="/Product/Index" class="btn btn-secondary">Quay lại</a>
+</form>
