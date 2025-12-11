@@ -5,7 +5,11 @@ public class ProductController : Controller
 {
     private static List<Product> products = new List<Product>()
     {
+<<<<<<< HEAD
         new Product { Id = 1, Name = "Cake 1", Price = 80000, Image = "cake1.jpg" },
+=======
+        new Product { Id = 1, Name = "Cake 1", Price = 85000, Image = "cake1.jpg" },
+>>>>>>> remotes/origin/update-price-B
         new Product { Id = 2, Name = "Cake 2", Price = 60000, Image = "cake2.jpg" }
     };
 
