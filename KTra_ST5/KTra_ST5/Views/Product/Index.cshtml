@@ -1,29 +1,37 @@
-﻿@model List<Product>
+﻿@model List<KTra_ST5.Models.Product>
 
-<h2>Danh sách sản phẩm</h2>
+<div class="container mt-4">
+    <h2 class="mb-3">Danh sách sản phẩm</h2>
 
-<a class="btn btn-primary" href="/Product/Create">Thêm sản phẩm</a>
+    <a class="btn btn-primary mb-3" href="/Product/Create">Thêm sản phẩm</a>
 
-<table class="table table-bordered">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Image</th>
-        <th>Actions</th>
-    </tr>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.Id</td>
-            <td>@item.Name</td>
-            <td>@item.Price</td>
-            <td><img src="/images/@item.Image" width="80" /></td>
-            <td>
-                <a href="/Product/Edit/@item.Id" class="btn btn-warning">Sửa</a>
-                <a href="/Product/Delete/@item.Id" class="btn btn-danger">Xóa</a>
-            </td>
-        </tr>
-    }
-</table>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                    <td>
+                        <img src="/images/@item.Image" width="80" />
+                    </td>
+                    <td>
+                        <a href="/Product/Edit/@item.Id" class="btn btn-warning btn-sm">Sửa</a>
+                        <a href="/Product/Delete/@item.Id" class="btn btn-danger btn-sm">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
